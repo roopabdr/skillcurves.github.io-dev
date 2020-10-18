@@ -1,0 +1,235 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:300|Montserrat:700,400);
+@import url(https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&display=swap,400);
+
+*{
+    box-sizing: border-box;
+    &:active, &:focus{
+    	border: 0;
+    	outline: 0;
+    }
+}
+
+html, body {
+	// height: 100%;
+	padding: 0;
+}
+
+html {
+	-webkit-tap-highlight-color:rgba(0,0,0,0);
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	@media screen and (max-width: 70em) {
+		font-size: ( 10 / 16 ) * 1rem;
+	}
+}
+
+body{
+	background-color: #EEEEEF;
+    // font-family: Montserrat, Helvetica, Times, serif;
+    font-family: 'Josefin Sans', sans-serif;
+	font-size: 1rem;
+	line-height: 1.45;
+    text-rendering: optimizeLegibility;
+    font-feature-settings: "liga", "kern";
+	-webkit-font-feature-settings: "liga", "kern";
+}
+
+section p {
+	margin-bottom: 1.3em;
+}
+
+section h1, section h2, section h3, section h4 {
+	margin: 1.414em 0 0.5em;
+	font-weight: 700;
+	line-height: 1.2;
+	letter-spacing: -.45rem;
+}
+
+section h1 {
+	margin-top: 10;
+	font-size: 4.853em;
+	/* Hello stylesheet! */
+	width: 90vw;
+	@extend %fit-top-right-bottom-left;
+}
+
+
+section{
+	position: relative;
+	height: 94vh;
+	padding: 2.618em 0;
+	text-align: center;
+    text-shadow: -2px 1px rgba(black, 0.1);
+    &:before{
+		position: absolute;
+		right: 0;
+		left: 0;
+        content: url('../images/logo512.png');
+        background-size: 10px 20px;
+
+    }
+	&:after{        
+        content: 'Training * Learning * Investing';        
+		position: absolute;
+        bottom: 25%;
+		left: 50%;
+		transform: translateX(-50%);
+		font-size: 1.75ex;
+		font-weight: 300;
+		font-family: Lato, Helvetica, Times, serif;
+		text-align: center;
+		text-transform: uppercase;
+		letter-spacing: 3.5px;
+		white-space: nowrap;
+	}
+	.bold{
+		display: inline-block;
+		font-weight: normal;
+		color: darken(#2A2C39, 10);
+		will-change: transform;
+		// transition: .2s;
+	}
+}
+
+%fit-top-right-bottom-left{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translateX(-50%) translateY(-50%);
+}
+
+@media screen and (min-width: 300px) and (max-width: 450px) {
+	section{
+        &:before{
+			position: absolute;
+			right: 0;
+			left: 0;
+			top: 10em;
+            content: url('../images/logo250.png');
+		}		
+	}
+	
+	section h1 {
+        font-size: 4em;
+    }
+}
+
+@media screen and (min-width: 451px) and (max-height: 720px) {
+	section{
+        &:before{
+			position: absolute;
+			right: 0;
+			left: 0;
+            content: url('../images/logo192.png');
+		}
+	}
+	
+	section h1 {
+        font-size: 3em;
+    }
+}
+
+@media screen and (min-width: 451px) and (min-height: 451px) and (max-width: 900px) {
+    section{
+        &:before{
+			position: absolute;
+			right: 0;
+			left: 0;
+			top: 10em;
+            content: url('../images/logo192.png');
+		}
+		&:after{
+			position: absolute;
+			bottom: 30%;
+			left: 50%;
+		}
+    }
+
+    section h1 {
+        font-size: 3em;
+    }
+}
+
+@media screen and (min-width: 1024px) and (min-height: 768px) {
+    section{
+        &:before{
+			position: absolute;
+			right: 0;
+			left: 0;
+			top: 10em;
+            content: url('../images/logo400.png');
+		}
+		&:after{
+			position: absolute;
+			bottom: 27%;
+			left: 50%;
+		}
+    }
+
+    section h1 {
+        font-size: 5em;
+    }
+}
+
+@media screen and (min-width: 768px) and (min-height: 1024px) {
+    section{
+        &:before{
+			position: absolute;
+			right: 0;
+			left: 0;
+			top: 22em;
+            content: url('../images/logo400.png');
+		}
+		&:after{
+			position: absolute;
+			bottom: 35%;
+			left: 50%;
+		}
+    }
+
+    section h1 {
+        font-size: 5em;
+    }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1024px) and (min-height: 1024px) {
+    section{
+        &:before{
+			position: absolute;
+			right: 0;
+			left: 0;
+			top: 30em;
+            content: url('../images/logo512.png');
+		}
+		&:after{
+			position: absolute;
+			bottom: 37%;
+			left: 50%;
+		}
+    }
+
+    section h1 {
+        font-size: 5em;
+    }
+}
+
+@media screen and (min-width: 1366px) and (max-width: 1366px) and (min-height: 1024px) {
+    section{
+        &:before{
+			position: absolute;
+			right: 0;
+			left: 0;
+			top: 10em;
+            content: url('../images/logo512.png');
+		}
+		&:after{
+			position: absolute;
+			bottom: 25%;
+			left: 50%;
+		}
+    }
+
+    section h1 {
+        font-size: 5em;
+    }
+}

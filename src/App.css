@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@423&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pirata+One&display=swap');
+
+:root {
+	--main-color: #643A7A;
+	--secondary-color: #741CAF;
+	--sans: "josefin sans", sans serif;
+}
+
+.logo {
+  position: fixed;
+  top: 7px;
+  right: 10px;
+  z-index: 3;
+}
+
+.contentStart {
+  margin-top: 3rem;
+}
+
+/* Add a black background color to the top navigation */
+
+.navigation {
+  position: fixed;
+  top: 0;
+  z-index: 3;
+  width: 100%;
+  background-color: #1c2550;
+  overflow: hidden;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Style the links inside the navigation bar */
+
+.navigation .nav {
+  float: left;
+  display: block;
+  text-align: center;
+  padding: 14px 16px;
+  font-size: 17px;
+}
+
+.navigation .nav a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+/* Change the color of links on hover */
+
+.navigation .nav:hover {
+  background-color: #FCF751;
+  cursor: pointer;
+  color: #000000;
+}
+
+.navigation .nav:hover a {
+  color: #000000;
+}
+
+/* Add an active class to highlight the current page */
+
+.navigation .nav.active a {
+  color: #FCF751;
+}
+
+.navigation .nav.active a:hover {
+  color: #FCF751;
+}
+
+.navigation .nav.active:hover {
+  background-color: #1c2550;
+}
+
+/* Hide the link that should open and close the navigation on small screens */
+
+.navigation .icon {
+  display: none;
+}
+
+.mainPage {
+  margin: auto;
+  padding: 1rem;
+  width: 70%;
+  text-align: justify;
+  font-family: "Georgia, 'Times New Roman', Times, serif";
+  font-weight: 500;
+  font-style: normal;
+  font-size: 1.3rem;
+  line-height: 2.1rem;
+}
+
+.newsletterLead {
+  background-color: #f8fa92f5;
+  min-height: 40vh;
+  margin: 0 0 1rem 0;
+  display: flex;
+}
+
+.newsletterBoxes .newsletterFields {
+  display: flex;
+}
+
+.newsletterBoxes input[type=email] {
+  width: 90%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+.newsletterBoxes input[type=email]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+.newsletterBoxes {
+  width: 70%;
+  margin: auto;
+  padding: 1rem;
+}
+
+.newsletterBoxes .registerbtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 16px;
+  margin: 8px 0 0 8px;
+  border: none;
+  cursor: pointer;
+  height: fit-content;
+  height: intrinsic;
+  height: -moz-max-content;
+  height: -webkit-max-content;
+  opacity: 0.9;
+}
+
+.newsletterBoxes .registerbtn:hover {
+  opacity: 1;
+}
+
+.newsletterBoxes .registerbtn:disabled, .registerbtn[disabled] {
+  border: 1px solid #999999;
+  background-color: #cccccc;
+  color: #666666;
+}
+
+.icon-bar {
+  position: fixed;
+  z-index: 99;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.icon-bar a {
+  display: block;
+  text-align: center;
+  padding: 16px;
+  transition: all 0.3s ease;
+  color: white;
+  font-size: 20px;
+}
+
+.icon-bar a:hover {
+  background-color: #000;
+}
+
+.facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.google {
+  background: #dd4b39;
+  color: white;
+}
+
+.linkedin {
+  background: #007bb5;
+  color: white;
+}
+
+.youtube {
+  background: #bb0000;
+  color: white;
+}
+
+/* media queries BEGIN */
+/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+
+@media screen and (max-width: 900px) {
+  .navigation {
+    position: relative;
+  }
+  .navigation span {
+    padding: 14px 16px;
+  }
+  .navigation span:not(:first-child) {
+    display: none;
+  }
+  .navigation span.icon {
+    float: right;
+    display: block;
+  }
+  .logo {
+    display: none;
+  }
+}
+
+/* The "responsive" class is added to the navigation with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+
+@media screen and (max-width: 900px) {
+  .navigation.responsive {
+    position: relative;
+  }
+  .navigation.responsive span.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .navigation.responsive span {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+
+@media screen and (max-width: 600px) {
+  .icon-bar a {
+    padding: 2px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .icon-bar a {
+    padding: 2px;
+  }
+}
+
+@media screen and (min-width: 450px) and (max-height: 700px) {
+  .icon-bar a {
+    padding: 2px;
+  }
+}
